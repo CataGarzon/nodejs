@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+   
+   
+    <title>myform:D</title>
+</head>
+
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Welcome to my form :D</h2>
+                <p>if you already have an account please log in here</p>
+                <button class="sign-up-btn">Log in</button>
+            </div>
+        </div>
+        <form action ="/index" method="post" class="formulario" >
+            <h2 class="create-account">Create account</h2>
+            <p class="cuenta-gratis">create a free account</p>
+            <input type="text" name = "name"placeholder="Name" required>
+            <input type="email" name = "user" placeholder="Email" required>
+            <input type="password" name="pass" placeholder="Password" required>
+            <input type="submit" value="Registrarse" class="btn-login">
+        </form>
+            
+    </div>
+    <div class="container-form sign-in">
+        <form action="auth" method="post" class="formulario">
+            <h2 class="create-account">Log in</h2>
+            <p class="cuenta-gratis">don't have an account yet?</p>
+            <input type="email" name="user" placeholder="Email" required>
+            <input type="password" name="pass" placeholder="Password" required>
+            <input type="submit" value="Log in" class="btn-login" >
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>welcome back</h2>
+                <p>If you don't have an account yet please register here</p>
+                <button class="sign-in-btn">Register</button>
+            </div>
+        </div>
+            </div>
+           
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <% if(typeof alert !="undefined" ) { %>
+          <script>
+            Swal.fire({
+              title: "<%= alertTitle %>",
+              text: "<%= alertMessage %>",
+              icon: "<%= alertIcon %>",
+              showConfirmButton: <%= showConfirmButton%>,
+              timer: "<%= timer %>"
+                              }).then(() => {
+
+                window.location = "<%= ruta %>"
+              })
+          </script>
+          <% } %>
+          <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <% if(typeof alert !="undefined" ) { %>
+            <script>
+              Swal.fire({
+                title2: "<%= alertTitle %>",
+                text2: "<%= alertMessage %>",
+                icon2: "<%= alertIcon %>",
+                showConfirmButton2: <%= showConfirmButton%>,
+                timer: "<%= timer %>"
+                                }).then(() => {
+  
+                  window.location = "<%= ruta %>"
+                })
+            </script>
+            <% } %>
+
+    <script src="resources/script.js"></script>
+</body>
+
+</html>
